@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GeometryReader { _ in
+            Rectangle()
+                .fill(Color.green)
+                .frame(width: 100, height: 50)
+        }
+        .frame(width: 50, height: 100)
+        .border(Color.black)
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+            ContentView()
     }
 }
